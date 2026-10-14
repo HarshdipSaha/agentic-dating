@@ -1,24 +1,54 @@
 # Agentic Dating Site 💘🤖
 
-> **Autonomous multi-agent dating simulation driven by real LinkedIn & Instagram profiles.**
-> Each person is represented by an AI agent that analyzes their public persona, goes on simulated multi-round dates with other agents, and outputs ranked matches with compatibility breakdowns.
+> **Autonomous multi-agent dating platform powered by real LinkedIn + Instagram profiles, Personal MCP (Model Context Protocol) digital doubles, and JEV System 1 deterministic compatibility scoring.**
+
+Each individual is represented by an autonomous AI agent backed by their own **Personal MCP Server** (reference: [`HarshdipSaha/harshdipsaha-mcp`](https://github.com/HarshdipSaha/harshdipsaha-mcp)). The agents date each other on their person's behalf, querying each other's MCP tools, and outputting mathematically calibrated compatibility rankings with evidence receipts.
 
 ---
 
 ## 🌟 Highlights
-- **25+ Real Verified Profiles**: Seeded with real LinkedIn and public Instagram profile pairs.
-- **Deep Persona Synthesis**: Extracts needs, hobbies, interests, values, and quirks from public LinkedIn & Instagram data.
-- **Agent-on-Agent Dating Sim**: Autonomous date conversations where persona agents interact, banter, evaluate chemistry, red flags, and shared passions.
-- **Personalized Compatibility Rankings**: Detailed match matrix & ranking for each individual with explainable compatibility scores and dating summaries.
-- **Interactive Live Web App**: Clean, modern UI allowing users to inspect profiles, watch live dates unfold, and input new LinkedIn + Instagram links.
+- **25+ Real Verified Profiles**: Seeded with real LinkedIn and public Instagram profile pairs (founders, creators, researchers, engineers, artists).
+- **Personal MCP Digital Doubles**: Every individual possesses a Model Context Protocol endpoint exposing standardized tools (`getProfile`, `getInterestsAndHobbies`, `getValuesAndDealbreakers`, `askCandidateQuestion`, `checkLogistics`).
+- **Two-Tier Cognitive Architecture**:
+  - **System 2 (Generative Dialogue Engine)**: Low-latency date simulations, witty banter, emotional dynamics, and real-time MCP tool invocations.
+  - **System 1 (JEV Cortex / TypeSafe AI)**: Non-hallucinatory rubric classification (`choice`, `score`, `noul`) directly assessing lifestyle alignment, dealbreaker checks, and ambition synergy.
+- **Autonomous Multi-Round Dates**: Watch agents actually go on dates, discover mutual interests, banter over coffee or dinners, and vet red flags.
+- **Explainable Compatibility Rankings**: Clear, structured ranking board for every person with breakdowns across Values, Lifestyle, Chemistry, and Logistics.
+- **Interactive Live Web App**: Clean, responsive UI with profile cards, live date transcripts, match ranking matrix, and interactive URL submission.
+
+---
+
+## 🧠 Architecture: Personal MCP + JEV Cortex
+
+For complete architectural specifications, schemas, and diagrams, see [docs/PERSONAL_MCP_AND_JEV_ARCHITECTURE.md](docs/PERSONAL_MCP_AND_JEV_ARCHITECTURE.md).
+
+```
+   LinkedIn + Public Instagram Profiles
+                   │
+                   ▼
+       Personal MCP Digital Doubles
+   (e.g., https://github.com/HarshdipSaha/harshdipsaha-mcp)
+                   │
+                   ├──────────────────────────────────────┐
+                   │                                      │
+                   ▼                                      ▼
+         System 2 Dating Sim                    System 1 JEV Cortex
+     (Dialogue & MCP Invocations)            (Deterministic Rubric Math)
+                   │                                      │
+                   └──────────────────┬───────────────────┘
+                                      │
+                                      ▼
+                      Ranked Match Matrix with Receipts
+```
 
 ---
 
 ## 🛠 Tech Stack
-- **Frontend / Fullstack**: Next.js / React, Tailwind CSS, Lucide Icons, Framer Motion
-- **Agent Intelligence**: LLM persona reasoning & conversation synthesis (Gemini 2.5/Flash / OpenAI)
-- **Data Ingestion**: Multi-tiered scraper (Apify Actors, Puppeteer/Playwright headless sessions, public OpenGraph/Meta scrapers) for LinkedIn and Instagram
-- **Evaluation & Matchmaking Engine**: Multi-dimensional compatibility matrix (Values, Lifestyle, Communication, Ambition)
+- **Frontend / Fullstack**: Next.js 15 (App Router), React 19, Tailwind CSS, Lucide Icons, Framer Motion
+- **Deterministic Classification (System 1)**: `@typesafe-ai/sdk` (Jev Cortex - unlimited tokens) for dealbreaker vetting, rubric scoring, and zero-hallucination alignment.
+- **Dialogue & Agent Simulation (System 2)**: Groq (Llama-3.3-70b / Mixtral with multi-key rotation) & Gemini 2.5/Flash
+- **Protocol & Interfaces**: Model Context Protocol (MCP) tool standard (`@modelcontextprotocol/sdk`)
+- **Data Ingestion**: Multi-tiered scraper (Playwright headless sessions, Apify profile actors, OpenGraph metadata parsing)
 
 ---
 
@@ -33,6 +63,15 @@
 git clone https://github.com/HarshdipSaha/agentic-dating.git
 cd agentic-dating
 npm install
+```
+
+Copy `.env.example` to `.env.local` and configure your keys:
+```bash
+cp .env.example .env.local
+```
+
+### Run the App
+```bash
 npm run dev
 ```
 
