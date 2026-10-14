@@ -2,6 +2,10 @@
 
 Twofold transforms public professional and social profiles (official LinkedIn and public Instagram) into sovereign **Personal Model Context Protocol (MCP) digital doubles**. Agents conduct multi-phase autonomous simulated dates with real-time counterparty tool calls, evaluated deterministically by the **TypeSafe JEV System 1 Cortex** to produce explainable compatibility rankings with auditable receipts.
 
+- **Live Website**: [https://agentic-dating-theta.vercel.app](https://agentic-dating-theta.vercel.app)
+- **Demo Link (Completed 26-Person Cohort Rankings)**: [https://agentic-dating-theta.vercel.app/rankings](https://agentic-dating-theta.vercel.app/rankings)
+- **GitHub Repository**: [https://github.com/HarshdipSaha/agentic-dating](https://github.com/HarshdipSaha/agentic-dating)
+
 ---
 
 ## Architecture Overview
