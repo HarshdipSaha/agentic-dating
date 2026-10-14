@@ -1,0 +1,13 @@
+{
+  "name": "Mel Robbins",
+  "requestedUrl": "https://www.instagram.com/melrobbins/",
+  "finalUrl": "https://www.instagram.com/melrobbins/",
+  "status": 200,
+  "title": "Mel Robbins (@melrobbins) • Instagram photos and videos",
+  "capturedAt": "2026-10-14T17:06:26.481Z",
+  "privateMessageVisible": false,
+  "profileHeaderVisible": true,
+  "publicStatus": "UNVERIFIED_REQUIRES_STRUCTURED_PROFILE_RESULT",
+  "identityStatus": "MANUAL_PAIR_REVIEW_REQUIRED",
+  "headerObservation": "Profile header inspected; bio content was not retained as agent evidence."
+}

@@ -1,0 +1,31 @@
+{
+  "status": "discovery_candidates_not_verified_demo",
+  "notes": "These URL pairs are research leads. A candidate is not admitted until both official identities and Instagram public status are verified. No personal analysis, dating preferences, or rankings have been generated.",
+  "candidates": [
+    {"name":"Ali Abdaal","linkedin":"https://www.linkedin.com/in/ali-abdaal/","instagram":"https://www.instagram.com/aliabdaal/"},
+    {"name":"Ankur Warikoo","linkedin":"https://www.linkedin.com/in/warikoo/","instagram":"https://www.instagram.com/ankurwarikoo/"},
+    {"name":"Ranveer Allahbadia","linkedin":"https://www.linkedin.com/in/beerbiceps/","instagram":"https://www.instagram.com/ranveerallahbadia/"},
+    {"name":"Sharan Hegde","linkedin":"https://www.linkedin.com/in/sharanhegde95/","instagram":"https://www.instagram.com/financewithsharan/"},
+    {"name":"Ishan Sharma","linkedin":"https://www.linkedin.com/in/ishansharma7390/","instagram":"https://www.instagram.com/ishansharma7390/"},
+    {"name":"Varun Mayya","linkedin":"https://www.linkedin.com/in/varunmayya/","instagram":"https://www.instagram.com/thevarunmayya/"},
+    {"name":"Raj Shamani","linkedin":"https://www.linkedin.com/in/rajshamani/","instagram":"https://www.instagram.com/rajshamani/"},
+    {"name":"Gary Vaynerchuk","linkedin":"https://www.linkedin.com/in/garyvaynerchuk/","instagram":"https://www.instagram.com/garyvee/"},
+    {"name":"Mel Robbins","linkedin":"https://www.linkedin.com/in/melrobbins/","instagram":"https://www.instagram.com/melrobbins/"},
+    {"name":"Simon Sinek","linkedin":"https://www.linkedin.com/in/simonsinek/","instagram":"https://www.instagram.com/simonsinek/"},
+    {"name":"Steven Bartlett","linkedin":"https://www.linkedin.com/in/stevenbartlett-123/","instagram":"https://www.instagram.com/steven/"},
+    {"name":"Marie Forleo","linkedin":"https://www.linkedin.com/in/marieforleo/","instagram":"https://www.instagram.com/marieforleo/"},
+    {"name":"Amy Porterfield","linkedin":"https://www.linkedin.com/in/amyporterfield/","instagram":"https://www.instagram.com/amyporterfield/"},
+    {"name":"Vanessa Van Edwards","linkedin":"https://www.linkedin.com/in/vanessavanedwards/","instagram":"https://www.instagram.com/vvanedwards/"},
+    {"name":"Chris Do","linkedin":"https://www.linkedin.com/in/thechrisdo/","instagram":"https://www.instagram.com/thechrisdo/"},
+    {"name":"Sahil Bloom","linkedin":"https://www.linkedin.com/in/sahilbloom/","instagram":"https://www.instagram.com/sahilbloom/"},
+    {"name":"Codie Sanchez","linkedin":"https://www.linkedin.com/in/codiesanchez/","instagram":"https://www.instagram.com/codiesanchez/"},
+    {"name":"Alex Hormozi","linkedin":"https://www.linkedin.com/in/alexhormozi/","instagram":"https://www.instagram.com/hormozi/"},
+    {"name":"Leila Hormozi","linkedin":"https://www.linkedin.com/in/leilahormozi/","instagram":"https://www.instagram.com/leilahormozi/"},
+    {"name":"Tori Dunlap","linkedin":"https://www.linkedin.com/in/toridunlap/","instagram":"https://www.instagram.com/herfirst100k/"},
+    {"name":"Dan Koe","linkedin":"https://www.linkedin.com/in/thedankoe/","instagram":"https://www.instagram.com/thedankoe/"},
+    {"name":"CA Rachana Ranade","linkedin":"https://www.linkedin.com/in/carachanaranade/","instagram":"https://www.instagram.com/ca_rachanaranade/"},
+    {"name":"Anushka Rathod","linkedin":"https://www.linkedin.com/in/anushka-rathod/","instagram":"https://www.instagram.com/anushkarathod98/"},
+    {"name":"Neha Nagar","linkedin":"https://www.linkedin.com/in/iamnehanagar/","instagram":"https://www.instagram.com/iamnehanagar/"},
+    {"name":"Masoom Minawala","linkedin":"https://www.linkedin.com/in/masoomminawala/","instagram":"https://www.instagram.com/masoomminawala/"}
+  ]
+}

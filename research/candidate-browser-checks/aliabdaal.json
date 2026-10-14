@@ -1,0 +1,13 @@
+{
+  "name": "Ali Abdaal",
+  "requestedUrl": "https://www.instagram.com/aliabdaal/",
+  "finalUrl": "https://www.instagram.com/aliabdaal/",
+  "status": 200,
+  "title": "Ali Abdaal (@aliabdaal) • Instagram photos and videos",
+  "capturedAt": "2026-10-14T17:06:15.161Z",
+  "privateMessageVisible": false,
+  "profileHeaderVisible": true,
+  "publicStatus": "UNVERIFIED_REQUIRES_STRUCTURED_PROFILE_RESULT",
+  "identityStatus": "MANUAL_PAIR_REVIEW_REQUIRED",
+  "headerObservation": "Profile header inspected; bio content was not retained as agent evidence."
+}

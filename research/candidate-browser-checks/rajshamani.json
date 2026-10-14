@@ -1,0 +1,13 @@
+{
+  "name": "Raj Shamani",
+  "requestedUrl": "https://www.instagram.com/rajshamani/",
+  "finalUrl": "https://www.instagram.com/rajshamani/",
+  "status": 200,
+  "title": "Raj Shamani (@rajshamani) • Instagram photos and videos",
+  "capturedAt": "2026-10-14T17:06:26.341Z",
+  "privateMessageVisible": false,
+  "profileHeaderVisible": true,
+  "publicStatus": "UNVERIFIED_REQUIRES_STRUCTURED_PROFILE_RESULT",
+  "identityStatus": "MANUAL_PAIR_REVIEW_REQUIRED",
+  "headerObservation": "Profile header inspected; bio content was not retained as agent evidence."
+}

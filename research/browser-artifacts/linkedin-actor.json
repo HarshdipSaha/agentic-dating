@@ -1,0 +1,27 @@
+{
+  "id": "linkedin-actor",
+  "requestedUrl": "https://apify.com/harvestapi/linkedin-profile-scraper/input-schema",
+  "finalUrl": "https://apify.com/harvestapi/linkedin-profile-scraper/input-schema",
+  "status": 200,
+  "title": "Input · LinkedIn Profile Scraper + Email (No Cookies) · Apify",
+  "capturedAt": "2026-10-14T17:01:42.889Z",
+  "links": [
+    {
+      "text": "",
+      "href": "http://linkedin.com/company/apify/"
+    }
+  ],
+  "screenshot": "H:\\AGENTIC PROJECT\\research\\browser-artifacts\\linkedin-actor.png",
+  "textLength": 6792,
+  "observations": {
+    "signUpVisible": false,
+    "privateMessageVisible": false,
+    "inputFieldsVisible": [
+      "profileScraperMode",
+      "urls",
+      "queries",
+      "publicIdentifiers",
+      "profileIds"
+    ]
+  }
+}

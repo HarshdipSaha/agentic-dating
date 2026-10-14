@@ -1,0 +1,101 @@
+{
+  "id": "warikoo-linkedin",
+  "requestedUrl": "https://www.linkedin.com/in/warikoo/",
+  "finalUrl": "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQGLUGB9UvKzogAAAaE7XNzA1vqooTdoYIV9Lr-xabfSce31OpKcLa111uHFKKgXhtg9MHgGWDSsebPzClGgOJIL3FD0AOOYl3Dve_Cgf2W-Om30hJNQRv_d63Kc3PRqkJRJywE=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fwarikoo",
+  "status": 999,
+  "title": "Sign Up | LinkedIn",
+  "capturedAt": "2026-10-14T17:01:48.457Z",
+  "links": [
+    {
+      "text": "User Agreement",
+      "href": "https://www.linkedin.com/legal/user-agreement?trk=linkedin-tc_auth-button_user-agreement"
+    },
+    {
+      "text": "Privacy Policy",
+      "href": "https://www.linkedin.com/legal/privacy-policy?trk=linkedin-tc_auth-button_privacy-policy"
+    },
+    {
+      "text": "Cookie Policy",
+      "href": "https://www.linkedin.com/legal/cookie-policy?trk=linkedin-tc_auth-button_cookie-policy"
+    },
+    {
+      "text": "Skip to main content",
+      "href": "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQGLUGB9UvKzogAAAaE7XNzA1vqooTdoYIV9Lr-xabfSce31OpKcLa111uHFKKgXhtg9MHgGWDSsebPzClGgOJIL3FD0AOOYl3Dve_Cgf2W-Om30hJNQRv_d63Kc3PRqkJRJywE=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fwarikoo#main-content"
+    },
+    {
+      "text": "LinkedIn",
+      "href": "https://www.linkedin.com/?trk=seo-authwall-base_nav-header-logo"
+    },
+    {
+      "text": "User Agreement",
+      "href": "https://www.linkedin.com/legal/user-agreement?trk=seo-authwall-base_join-form-user-agreement"
+    },
+    {
+      "text": "Privacy Policy",
+      "href": "https://www.linkedin.com/legal/privacy-policy?trk=seo-authwall-base_join-form-privacy-policy"
+    },
+    {
+      "text": "Cookie Policy",
+      "href": "https://www.linkedin.com/legal/cookie-policy?trk=seo-authwall-base_join-form-cookie-policy"
+    },
+    {
+      "text": "Forgot password?",
+      "href": "https://www.linkedin.com/uas/request-password-reset?trk=seo-authwall-base_forgot_password"
+    },
+    {
+      "text": "User Agreement",
+      "href": "https://www.linkedin.com/legal/user-agreement?trk=seo-authwall-base_auth-button_user-agreement"
+    },
+    {
+      "text": "Privacy Policy",
+      "href": "https://www.linkedin.com/legal/privacy-policy?trk=seo-authwall-base_auth-button_privacy-policy"
+    },
+    {
+      "text": "Cookie Policy",
+      "href": "https://www.linkedin.com/legal/cookie-policy?trk=seo-authwall-base_auth-button_cookie-policy"
+    },
+    {
+      "text": "About",
+      "href": "https://about.linkedin.com/?trk=seo-authwall-base_footer-about"
+    },
+    {
+      "text": "Accessibility",
+      "href": "https://www.linkedin.com/accessibility?trk=seo-authwall-base_footer-accessibility"
+    },
+    {
+      "text": "User Agreement",
+      "href": "https://www.linkedin.com/legal/user-agreement?trk=seo-authwall-base_footer-user-agreement"
+    },
+    {
+      "text": "Privacy Policy",
+      "href": "https://www.linkedin.com/legal/privacy-policy?trk=seo-authwall-base_footer-privacy-policy"
+    },
+    {
+      "text": "Cookie Policy",
+      "href": "https://www.linkedin.com/legal/cookie-policy?trk=seo-authwall-base_footer-cookie-policy"
+    },
+    {
+      "text": "Copyright Policy",
+      "href": "https://www.linkedin.com/legal/copyright-policy?trk=seo-authwall-base_footer-copyright-policy"
+    },
+    {
+      "text": "Brand Policy",
+      "href": "https://brand.linkedin.com/policies?trk=seo-authwall-base_footer-brand-policy"
+    },
+    {
+      "text": "Guest Controls",
+      "href": "https://www.linkedin.com/psettings/guest-controls?trk=seo-authwall-base_footer-guest-controls"
+    },
+    {
+      "text": "Community Guidelines",
+      "href": "https://www.linkedin.com/legal/professional-community-policies?trk=seo-authwall-base_footer-community-guide"
+    }
+  ],
+  "screenshot": "H:\\AGENTIC PROJECT\\research\\browser-artifacts\\warikoo-linkedin.png",
+  "textLength": 1580,
+  "observations": {
+    "signUpVisible": true,
+    "privateMessageVisible": false,
+    "inputFieldsVisible": []
+  }
+}

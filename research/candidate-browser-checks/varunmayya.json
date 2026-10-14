@@ -1,0 +1,13 @@
+{
+  "name": "Varun Mayya",
+  "requestedUrl": "https://www.instagram.com/varunmayya/",
+  "finalUrl": "https://www.instagram.com/varunmayya/",
+  "status": 200,
+  "title": "varunmayya • Instagram photos and videos",
+  "capturedAt": "2026-10-14T17:06:22.595Z",
+  "privateMessageVisible": false,
+  "profileHeaderVisible": false,
+  "publicStatus": "UNVERIFIED_REQUIRES_STRUCTURED_PROFILE_RESULT",
+  "identityStatus": "MANUAL_PAIR_REVIEW_REQUIRED",
+  "headerObservation": "Profile header inspected; bio content was not retained as agent evidence."
+}

@@ -1,0 +1,177 @@
+{
+  "id": "warikoo-instagram",
+  "requestedUrl": "https://www.instagram.com/ankurwarikoo/",
+  "finalUrl": "https://www.instagram.com/ankurwarikoo/",
+  "status": 200,
+  "title": "Ankur Warikoo (@ankurwarikoo) • Instagram photos and videos",
+  "capturedAt": "2026-10-14T17:01:54.804Z",
+  "links": [
+    {
+      "text": "",
+      "href": "https://www.instagram.com/"
+    },
+    {
+      "text": "Log In",
+      "href": "https://www.instagram.com/accounts/login/?next=%2Fankurwarikoo%2F&source=desktop_nav"
+    },
+    {
+      "text": "Sign Up",
+      "href": "https://www.instagram.com/accounts/emailsignup/"
+    },
+    {
+      "text": "4M followers",
+      "href": "https://www.instagram.com/ankurwarikoo/#"
+    },
+    {
+      "text": "20 following",
+      "href": "https://www.instagram.com/ankurwarikoo/#"
+    },
+    {
+      "text": "Wallpapers",
+      "href": "https://www.instagram.com/stories/highlights/18349095748053080/"
+    },
+    {
+      "text": "Egypt",
+      "href": "https://www.instagram.com/stories/highlights/18100459843983557/"
+    },
+    {
+      "text": "Hampi",
+      "href": "https://www.instagram.com/stories/highlights/18552837592021390/"
+    },
+    {
+      "text": "MP",
+      "href": "https://www.instagram.com/stories/highlights/18081847786930378/"
+    },
+    {
+      "text": "Ajanta Ellora",
+      "href": "https://www.instagram.com/stories/highlights/18054611384285742/"
+    },
+    {
+      "text": "Germany",
+      "href": "https://www.instagram.com/stories/highlights/18058136963263126/"
+    },
+    {
+      "text": "Greece",
+      "href": "https://www.instagram.com/stories/highlights/18129581353388383/"
+    },
+    {
+      "text": "WARNING!!!",
+      "href": "https://www.instagram.com/stories/highlights/18290989963203204/"
+    },
+    {
+      "text": "Kazakhstan",
+      "href": "https://www.instagram.com/stories/highlights/17899354254023284/"
+    },
+    {
+      "text": "Bhrigu Lake",
+      "href": "https://www.instagram.com/stories/highlights/18060119530612710/"
+    },
+    {
+      "text": "",
+      "href": "https://www.instagram.com/ankurwarikoo/"
+    },
+    {
+      "text": "",
+      "href": "https://www.instagram.com/ankurwarikoo/#"
+    },
+    {
+      "text": "",
+      "href": "https://www.instagram.com/ankurwarikoo/#"
+    },
+    {
+      "text": "",
+      "href": "https://www.instagram.com/ankurwarikoo/reel/DdatSS4qfyM/"
+    },
+    {
+      "text": "",
+      "href": "https://www.instagram.com/ankurwarikoo/reel/DazWtvvKeva/"
+    },
+    {
+      "text": "",
+      "href": "https://www.instagram.com/ankurwarikoo/reel/DU-iSoHjA1F/"
+    },
+    {
+      "text": "",
+      "href": "https://www.instagram.com/ankurwarikoo/p/DeaT6VRzJtC/"
+    },
+    {
+      "text": "",
+      "href": "https://www.instagram.com/ankurwarikoo/reel/Ddl33PlsoGF/"
+    },
+    {
+      "text": "",
+      "href": "https://www.instagram.com/ankurwarikoo/reel/DeGYWS7KM8I/"
+    },
+    {
+      "text": "",
+      "href": "https://www.instagram.com/ankurwarikoo/p/DecFONwE1Ay/"
+    },
+    {
+      "text": "",
+      "href": "https://www.instagram.com/ankurwarikoo/reel/Dea9C7oBukH/"
+    },
+    {
+      "text": "",
+      "href": "https://www.instagram.com/ankurwarikoo/p/DeZnINkKH3Z/"
+    },
+    {
+      "text": "",
+      "href": "https://www.instagram.com/ankurwarikoo/reel/DeBYspjqlrn/"
+    },
+    {
+      "text": "",
+      "href": "https://www.instagram.com/ankurwarikoo/p/DeW_9NNGqgd/"
+    },
+    {
+      "text": "",
+      "href": "https://www.instagram.com/ankurwarikoo/reel/DeV_HA8qGi7/"
+    },
+    {
+      "text": "About",
+      "href": "https://about.instagram.com/"
+    },
+    {
+      "text": "Blog",
+      "href": "https://about.instagram.com/blog/"
+    },
+    {
+      "text": "Jobs",
+      "href": "https://about.instagram.com/about-us/careers"
+    },
+    {
+      "text": "Help",
+      "href": "https://help.instagram.com/"
+    },
+    {
+      "text": "Privacy",
+      "href": "https://www.instagram.com/legal/privacy/"
+    },
+    {
+      "text": "Terms",
+      "href": "https://www.instagram.com/legal/terms/"
+    },
+    {
+      "text": "Locations",
+      "href": "https://www.instagram.com/explore/locations/"
+    },
+    {
+      "text": "Popular",
+      "href": "https://www.instagram.com/popular/"
+    },
+    {
+      "text": "Instagram Lite",
+      "href": "https://www.instagram.com/web/lite/"
+    },
+    {
+      "text": "Meta Verified",
+      "href": "https://www.instagram.com/accounts/meta_verified/?entrypoint=web_footer"
+    }
+  ],
+  "screenshot": "H:\\AGENTIC PROJECT\\research\\browser-artifacts\\warikoo-instagram.png",
+  "textLength": 954,
+  "observations": {
+    "signUpVisible": true,
+    "privateMessageVisible": false,
+    "inputFieldsVisible": []
+  }
+}

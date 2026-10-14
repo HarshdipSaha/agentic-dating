@@ -1,0 +1,33 @@
+{
+  "id": "gary-links",
+  "requestedUrl": "https://garyvaynerchuk.com/",
+  "finalUrl": "https://garyvaynerchuk.com/",
+  "status": 200,
+  "title": "Gary Vaynerchuk | Entrepreneur, Author & Creator",
+  "capturedAt": "2026-10-14T17:02:05.355Z",
+  "links": [
+    {
+      "text": "",
+      "href": "https://linkedin.com/in/garyvaynerchuk"
+    },
+    {
+      "text": "",
+      "href": "https://instagram.com/garyvee"
+    },
+    {
+      "text": "",
+      "href": "https://instagram.com/garyvee"
+    },
+    {
+      "text": "",
+      "href": "https://linkedin.com/in/garyvaynerchuk"
+    }
+  ],
+  "screenshot": "H:\\AGENTIC PROJECT\\research\\browser-artifacts\\gary-links.png",
+  "textLength": 1071,
+  "observations": {
+    "signUpVisible": true,
+    "privateMessageVisible": false,
+    "inputFieldsVisible": []
+  }
+}

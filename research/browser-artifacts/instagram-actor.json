@@ -1,0 +1,24 @@
+{
+  "id": "instagram-actor",
+  "requestedUrl": "https://apify.com/apify/instagram-profile-scraper/input-schema",
+  "finalUrl": "https://apify.com/apify/instagram-profile-scraper/input-schema",
+  "status": 200,
+  "title": "Input · 👤 Instagram Profile Scraper · Apify",
+  "capturedAt": "2026-10-14T17:01:41.341Z",
+  "links": [
+    {
+      "text": "",
+      "href": "http://linkedin.com/company/apify/"
+    }
+  ],
+  "screenshot": "H:\\AGENTIC PROJECT\\research\\browser-artifacts\\instagram-actor.png",
+  "textLength": 6503,
+  "observations": {
+    "signUpVisible": false,
+    "privateMessageVisible": false,
+    "inputFieldsVisible": [
+      "queries",
+      "usernames"
+    ]
+  }
+}
