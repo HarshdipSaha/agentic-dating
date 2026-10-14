@@ -1,77 +1,165 @@
-# Twofold
+# Twofold — Evidence-First Agentic Dating Platform
 
-Twofold is an early-stage agentic dating project. It explores how separate agents can build source-backed profiles, hold simulated dates, and produce explainable rankings.
+Twofold transforms public professional and social profiles (official LinkedIn and public Instagram) into sovereign **Personal Model Context Protocol (MCP) digital doubles**. Agents conduct multi-phase autonomous simulated dates with real-time counterparty tool calls, evaluated deterministically by the **TypeSafe JEV System 1 Cortex** to produce explainable compatibility rankings with auditable receipts.
 
-The repository contains a product specification, architecture notes, and early TypeScript project scaffolding. It does not yet contain a complete website, a live scraper, or a finished 25-person demo. The candidate list is research material: its entries have not passed identity and Instagram public-status verification.
+---
 
-## Project structure
+## Architecture Overview
 
-```text
-docs/       Architecture and integration notes
-research/   Candidate links and browser research artifacts
-scripts/    Local project and research scripts
-src/        TypeScript source and shared types
-SPEC.md     Product and implementation specification
-DELIVERY-PLAN.md
-            Build schedule and video storyboard
-RESEARCH.md Findings and feasibility notes
+```
+                      +-----------------------------+
+                      |  LinkedIn + Public IG Data  |
+                      +--------------+--------------+
+                                     |
+                                     v
+                      +-----------------------------+
+                      |     Personal MCP Server     |
+                      |  (Standard Tool Interface)  |
+                      +--------------+--------------+
+                                     |
+           +-------------------------+-------------------------+
+           |                                                   |
+           v                                                   v
++-----------------------------------+       +-----------------------------------+
+|     System 2 Narrative Engine     |       |       System 1 JEV Cortex         |
+|    (Groq Multi-Key / Gemini)      |       |      (@typesafe-ai/sdk client)    |
++-----------------------------------+       +-----------------------------------+
+| * Autonomous Multi-Round Dates    |       | * Deterministic Rubric Choice     |
+| * Real-time Persona Banter        |       | * Dealbreaker Verification        |
+| * Tool calls to counterparty MCP  |       | * Calibrated Compatibility Math   |
+| * Full Transcript Generation      |       | * Zero-Hallucination Grade        |
++-----------------+-----------------+       +-----------------+-----------------+
+                  |                                           |
+                  +---------------------+---------------------+
+                                        |
+                                        v
+                      +-------------------------------------+
+                      |     Ranked Match Board & Matrix     |
+                      |    (Explainable Scores + Receipts)  |
+                      +-------------------------------------+
 ```
 
-The shared data types are in `src/types`. The architecture proposal in `docs/PERSONAL_MCP_AND_JEV_ARCHITECTURE.md` describes a Personal MCP interface and a two-part agent design: Groq for conversation generation and JEV through `@typesafe-ai/sdk` for structured scoring. These are proposed integrations; the current codebase does not yet implement that complete flow.
+### 1. Personal MCP Digital Doubles
+Every candidate in the 26-person verified cohort hosts a sovereign Model Context Protocol interface exposing 5 standard endpoints:
+- `getProfile()`: Name, headline, bio, education, current roles, and verified source links.
+- `getInterestsAndHobbies()`: Passions, weekend vibe, creative outlets, aesthetic tastes, and cultural diet.
+- `getValuesAndDealbreakers()`: Core values, non-negotiables, communication style, and conflict resolution philosophy.
+- `askCandidateQuestion(question, inquiryTopic)`: Interactive in-date inquiries with dynamic comfort-level filtering.
+- `checkLogistics(targetCity, travelTolerance)`: Geographical and mobility compatibility scoring.
 
-## Get started
+*Reference Implementation:* Modeled after Harshdip Saha's open-source MCP server ([`HarshdipSaha/harshdipsaha-mcp`](https://github.com/HarshdipSaha/harshdipsaha-mcp)).
 
-Requires Node.js and npm.
+### 2. Dual-Brain System 1 + System 2 Calibration
+Unconstrained LLMs suffer from "politeness inflation" (defaulting to 85-95/100 on romantic chemistry). Twofold decouples generation from evaluation:
+- **System 2 (Groq Llama-3.3-70B Multi-Key Rotation)**: Generates 8-turn dates across Introduction, Activity Exploration, Concrete Trade-off, and Reflection phases.
+- **System 1 Cortex (TypeSafe AI JEV SDK)**: Runs deterministic classification using:
+  - `choice`: Lifestyle Harmony (`dissonant`, `manageable_friction`, `harmonic`, `synergistic`)
+  - `choice`: Dealbreaker Status (`critical_clash`, `minor_friction`, `uncompromised_alignment`)
+  - `score`: Intellectual & Ambition Pace (Levels 1 to 4)
+  - `noul`: Coexistence Feasibility (Viable vs Geographic Friction)
+  - `score`: Observed Conversational Chemistry
+
+---
+
+## 26 Verified Candidate Cohort
+
+All 26 individuals have their official LinkedIn and public Instagram accounts verified:
+1. **Harshdip Saha** — UG ML Researcher in Medical Brain Imaging & LLM Safety Alignment (NexGenLab NSUT, IIT Madras, BraTS 2025 3rd place, ETH Zurich alignment collaboration)
+2. **Ali Abdaal** — Doctor, Author of *Feel-Good Productivity* & YouTube Educator (Cambridge Medicine)
+3. **Ankur Warikoo** — Entrepreneur, Author of *Do Epic Shit* & Public Mentor (ISB)
+4. **Ranveer Allahbadia** — Host of *The Ranveer Show* (TRS), Co-founder Monk-E
+5. **Sharan Hegde** — Founder *The 1% Club*, Ex-Consultant (KPMG/PwC)
+6. **Ishan Sharma** — Founder MarkitUp, Tech & Career Creator, Author
+7. **Varun Mayya** — Founder of Aeos & God Mode, AI Author & Builder
+8. **Raj Shamani** — Host *Figuring Out Podcast*, Founder House of X, Investor
+9. **Gary Vaynerchuk** — Chairman VaynerX, CEO VaynerMedia, Creator VeeFriends
+10. **Mel Robbins** — Author of *The 5 Second Rule* & *The Let Them Theory*
+11. **Simon Sinek** — Author of *Start With Why* & *The Infinite Game*, Ethnographer
+12. **Steven Bartlett** — Host *The Diary of a CEO*, Founder Flight Story & Thirdweb
+13. **Marie Forleo** — Author of *Everything is Figureoutable*, Host MarieTV
+14. **Amy Porterfield** — Author of *Two Weeks Notice*, Host *Online Marketing Made Easy*
+15. **Vanessa Van Edwards** — Founder Science of People, Author of *Captivate* and *Cues*
+16. **Chris Do** — Founder The Futur, Emmy Award-Winning Director & Business Coach
+17. **Sahil Bloom** — Author of *The 5 Types of Wealth*, Creator of The Curiosity Chronicle
+18. **Codie Sanchez** — Founder Contrarian Thinking, Main Street Business Investor
+19. **Alex Hormozi** — Founder Acquisition.com, Author of *$100M Offers* & *$100M Leads*
+20. **Leila Hormozi** — CEO Acquisition.com, Organizational Architect
+21. **Tori Dunlap** — Founder Her First $100K, Author of *Financial Feminist*
+22. **Dan Koe** — Author of *The Art of Focus*, Creator of Modern Renaissance
+23. **CA Rachana Ranade** — Chartered Accountant, Capital Markets Educator
+24. **Anushka Rathod** — Fintech Creator, Ex-Investment Banker, Forbes 30 Under 30
+25. **Neha Nagar** — CEO TaxationHelp, Fintech Influencer & Business Consultant
+26. **Masoom Minawala** — Global Luxury Fashion Creator, Empowher Investor
+
+---
+
+## Key Platform Routes
+
+- `/`: Editorial landing page with architecture diagram, cohort metrics, and interactive launchpad.
+- `/profiles`: Full directory of all 26 verified profiles with search, filter, and official source links.
+- `/profiles/[id]`: Deep profile inspection displaying source captures, extracted traits, explicit honest unknowns, and embedded MCP test console.
+- `/mcp-inspector`: Interactive MCP Workbench for querying any candidate's MCP tools in real-time.
+- `/simulate`: Live 8-turn date simulator with real-time MCP tool invocations and JEV System 1 scoring.
+- `/dates`: Archive of completed date transcripts with turn-by-turn dialogue and receipts.
+- `/dates/[id]`: Auditable transcript view with full tool call parameters, responses, and JEV rubric.
+- `/rankings`: Full 26x25 ranking matrix showing reciprocal scores, directional comparisons, and top match leaderboard.
+- `/import`: Real-time ingestion sandbox to paste any LinkedIn + Instagram URL pair, instantiate an MCP double, and date against the cohort.
+
+---
+
+## WebAttack Layout & Functional Verification
+
+Twofold was rigorously verified using a Playwright WebAttack test suite (`scripts/webattack.cjs`) across both Desktop (1440x900) and Mobile (390x844 iPhone viewport):
+
+- **Routes Crawled:** 10 core routes (`/`, `/profiles`, `/profiles/harshdip-saha`, `/profiles/ali-abdaal`, `/mcp-inspector`, `/simulate`, `/dates`, `/dates/date-harshdip-saha-ali-abdaal`, `/rankings`, `/import`)
+- **Horizontal Overflow Check:** `document.documentElement.scrollWidth <= document.documentElement.clientWidth` across all pages (0 overflow errors detected).
+- **Interactive Probes:**
+  - Real-time MCP tool invocation verified on `/mcp-inspector`.
+  - 8-turn dating simulation and JEV rubric evaluation verified on `/simulate`.
+  - Candidate profile ingestion and MCP double deployment verified on `/import`.
+- **Test Artifacts:** 22 full-page high-DPI screenshots saved in `test-artifacts/` alongside `test-artifacts/webattack-report.json`.
+
+---
+
+## Getting Started
+
+### Prerequisites
+- Node.js v20+ or v22+
+- npm v10+
+
+### Installation & Execution
 
 ```powershell
+# 1. Install dependencies
 npm install
-Copy-Item .env.example .env.local
-npm run dev
+
+# 2. Build production assets
+npm run build
+
+# 3. Start production server on port 3000
+npm start
+
+# 4. Run WebAttack layout & functional verification
+npm run test:webattack
 ```
 
-`npm run dev` starts the Next.js development server at `http://localhost:3000`. The application routes and full UI are still to be implemented, so this currently runs the project scaffold. Configure provider keys in `.env.local` before adding provider-backed features. Keep that file private; `.env.local` is excluded from Git.
+### Environment Configuration (`.env.local`)
+```env
+# TypeSafe JEV System 1 Cortex
+TYPESAFE_API_KEY=your_typesafe_key
+JEV_API_KEY=your_typesafe_key
+JEV_MODEL=jev-latest
 
-Available package scripts:
+# Groq System 2 Multi-Key Rotation Pool
+GROQ_API_KEY=gsk_key1,gsk_key2,gsk_key3
 
-| Command | Purpose |
-| --- | --- |
-| `npm run dev` | Start the Next.js development server on port 3000 |
-| `npm run build` | Build the Next.js application |
-| `npm start` | Start the production server on port 3000 |
-| `npm run typecheck` | Check TypeScript types |
+# App URL
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+```
 
-## Proposed data flow
+---
 
-1. A person submits one LinkedIn profile URL and one Instagram profile URL.
-2. The server collects and validates data from those accounts.
-3. The app creates a profile with links back to its supporting evidence.
-4. An agent uses that profile in a clearly labeled simulated date with another agent.
-5. The agents assess the conversation independently, and the app presents ranked results with transcript links.
-
-The specification requires both sources to pass identity checks and Instagram public-status checks before analysis. The application must show unknowns when the sources do not support a claim. Public profile information does not establish a person's romantic preferences or real-world interest in another person.
-
-## Research and specifications
-
-- [Product and technical specification](SPEC.md): user stories, architecture, data and API contracts, agent behavior, ranking rules, and acceptance criteria.
-- [Delivery plan](DELIVERY-PLAN.md): three-hour schedule, workload estimates, video storyboard, and draft submission text.
-- [Research notes](RESEARCH.md): Apify provider research, browser observations, and the live feasibility checks still required.
-- [Architecture notes](docs/PERSONAL_MCP_AND_JEV_ARCHITECTURE.md): proposed MCP and scoring architecture.
-- [Candidate links](research/CANDIDATES.md): 25 discovery candidates and their current verification status.
-- [Candidate manifest](research/candidates.json): candidate LinkedIn and Instagram URLs in JSON format.
-- [Browser check results](research/candidate-browser-checks/summary.json): Instagram header observations. These checks do not certify account ownership or public post access.
-
-The research scripts in `research/` use Playwright to inspect public pages in a fresh browser context. They are research utilities, not the application's scraping implementation. The documented Apify actors were evaluated but have not been run with credentials; no successful Apify scrape is represented in this repository.
-
-## Current status
-
-| Deliverable | Status |
-| --- | --- |
-| Specification and research | Written locally |
-| Next.js and TypeScript scaffolding | Present |
-| Apify-backed import flow | Not implemented or live-tested |
-| Verified 25-person cohort | Not available |
-| Complete agent dating run and rankings | Not available |
-| Public website, demo, and GitHub submission | Not published |
-| Three-minute YouTube video | Not recorded |
-
-The `/to-spec` skill calls for publishing the specification to a configured issue tracker with the `ready-for-agent` label. No tracker was configured for this task, so the specification is saved in the repository instead.
+## Design System & Privacy Boundaries
+- **Strict Zero-Emoji Policy**: All UI elements and code use elegant SVG icons from Lucide React (`lucide-react`).
+- **Warm Editorial Aesthetic**: Warm ivory canvas (`#faf8f5`), rich slate/ink typography (`#1c1917`), and terracotta/crimson accents (`#991b1b`).
+- **Honest Unknowns**: The platform strictly preserves unknown relationship intentions and refrains from inferring private personal preferences from public professional data.

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Twofold — The Two-Source Rule</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --paper: #f4eee3;
+        --ink: #151311;
+        --muted: #756e64;
+        --line: #d9d0c1;
+        --wine: #922f2a;
+        --wine-dark: #5e1c1a;
+        --gold: #d7a74f;
+        --cream: #fffaf1;
+        --green: #27654f;
+      }
+
+      * { box-sizing: border-box; }
+      html, body { margin: 0; min-height: 100%; }
+      body {
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "DM Sans", sans-serif;
+      }
+
+      .slide {
+        position: relative;
+        isolation: isolate;
+        width: 100vw;
+        min-height: 100vh;
+        overflow: hidden;
+        padding: clamp(28px, 4vw, 68px);
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(540px, .9fr);
+        gap: clamp(42px, 6vw, 112px);
+        align-items: center;
+      }
+
+      .slide::before {
+        content: "";
+        position: absolute;
+        z-index: -2;
+        inset: 0;
+        background:
+          radial-gradient(circle at 8% 14%, rgba(215,167,79,.2), transparent 21%),
+          radial-gradient(circle at 88% 84%, rgba(146,47,42,.12), transparent 27%),
+          linear-gradient(115deg, rgba(255,255,255,.35), transparent 52%);
+      }
+
+      .slide::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        pointer-events: none;
+        opacity: .27;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.28'/%3E%3C/svg%3E");
+        mix-blend-mode: multiply;
+      }
+
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--wine);
+        font: 500 clamp(11px, .8vw, 14px)/1 "DM Mono", monospace;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before { content: ""; width: 34px; height: 1px; background: currentColor; }
+      h1 {
+        max-width: 780px;
+        margin: 26px 0 24px;
+        font: 600 clamp(53px, 5.4vw, 104px)/.98 "Playfair Display", Georgia, serif;
+        letter-spacing: -.055em;
+      }
+      h1 em { color: var(--wine); font-weight: 600; }
+      .lede { max-width: 650px; margin: 0; color: #4c4640; font-size: clamp(18px, 1.35vw, 25px); line-height: 1.45; }
+      .fact-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 34px; }
+      .fact { display: inline-flex; align-items: center; gap: 9px; padding: 10px 13px; border: 1px solid var(--line); background: rgba(255,250,241,.6); font-size: 13px; font-weight: 600; }
+      .fact i { display: block; width: 7px; height: 7px; border-radius: 50%; background: var(--wine); }
+
+      .profile {
+        position: relative;
+        width: min(100%, 650px);
+        margin: 0 auto;
+        background: var(--cream);
+        border: 1px solid var(--line);
+        box-shadow: 16px 20px 0 rgba(146,47,42,.1), 0 26px 65px rgba(56,37,21,.16);
+        animation: settle .9s cubic-bezier(.16,1,.3,1) both;
+      }
+      .profile-header { padding: 28px 30px 23px; border-bottom: 1px solid var(--line); background: #fffdf7; }
+      .status-line { display: flex; justify-content: space-between; align-items: center; color: var(--muted); font: 500 11px/1 "DM Mono", monospace; letter-spacing: .1em; text-transform: uppercase; }
+      .status { color: var(--green); }
+      .status::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 7px; border-radius: 50%; background: currentColor; }
+      .identity { display: flex; align-items: center; gap: 17px; margin-top: 24px; }
+      .monogram { display: grid; place-items: center; width: 62px; height: 62px; flex: 0 0 62px; color: var(--cream); background: var(--wine-dark); font: 600 25px/1 "Playfair Display", serif; }
+      .name { margin: 0; font: 600 26px/1.1 "Playfair Display", serif; letter-spacing: -.03em; }
+      .role { margin: 5px 0 0; color: var(--muted); font-size: 13px; }
+      .sources { display: flex; gap: 8px; margin-top: 22px; }
+      .source { display: inline-flex; align-items: center; gap: 7px; padding: 8px 10px; color: #34302b; border: 1px solid var(--line); background: var(--cream); text-decoration: none; font: 500 11px/1 "DM Mono", monospace; transition: .2s ease; }
+      .source:hover { color: var(--wine); border-color: var(--wine); transform: translateY(-2px); }
+      .source b { color: var(--wine); }
+      .analysis { padding: 0 30px 26px; }
+      .analysis-top { display: flex; justify-content: space-between; align-items: baseline; padding: 21px 0 14px; }
+      .analysis-top h2 { margin: 0; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; }
+      .analysis-top span { color: var(--muted); font: 11px/1 "DM Mono", monospace; }
+      .trait { position: relative; display: grid; grid-template-columns: 117px 1fr; gap: 13px; padding: 15px 0; border-top: 1px solid #ebe2d4; }
+      .trait-label { color: var(--wine); font: 500 10px/1.35 "DM Mono", monospace; letter-spacing: .07em; text-transform: uppercase; }
+      .trait-content { color: #3d3731; font-size: 14px; line-height: 1.48; }
+      .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+      .chip { padding: 5px 8px; background: #f0e8da; color: #514a42; border-radius: 2px; font: 500 11px/1 "DM Mono", monospace; }
+      .unknown { color: #756650; background: #fbf2df; border-left: 2px solid var(--gold); padding: 7px 9px; font-size: 12px; }
+      .evidence { display: inline-flex; align-items: center; gap: 5px; margin-top: 8px; color: var(--green); font: 500 10px/1 "DM Mono", monospace; letter-spacing: .04em; }
+      .evidence::before { content: "↗"; font-size: 13px; }
+      .corner-note { position: absolute; right: -16px; top: 13%; padding: 10px 12px; color: var(--cream); background: var(--wine); box-shadow: 0 6px 16px rgba(84,24,22,.22); font: 500 10px/1.35 "DM Mono", monospace; letter-spacing: .07em; text-transform: uppercase; transform: rotate(4deg); animation: note .7s .45s both; }
+      .stage { position: absolute; right: 38px; bottom: 28px; color: var(--muted); font: 500 11px/1 "DM Mono", monospace; letter-spacing: .1em; }
+
+      @keyframes settle { from { opacity: 0; transform: translateY(25px) rotate(1.5deg); } to { opacity: 1; transform: translateY(0) rotate(0); } }
+      @keyframes note { from { opacity: 0; transform: translateX(15px) rotate(4deg); } to { opacity: 1; transform: translateX(0) rotate(4deg); } }
+
+      @media (max-width: 900px) {
+        .slide { grid-template-columns: 1fr; padding: 40px 24px 56px; }
+        .profile { margin-top: 10px; }
+        .stage { display: none; }
+      }
+      @media (max-width: 500px) {
+        h1 { font-size: 54px; }
+        .profile-header, .analysis { padding-left: 20px; padding-right: 20px; }
+        .trait { grid-template-columns: 1fr; gap: 7px; }
+        .corner-note { right: 4px; top: -15px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="slide">
+      <section>
+        <div class="eyebrow">Act 1 · Profile before prediction</div>
+        <h1>Two sources.<br /><em>One agent.</em><br />Every claim traceable.</h1>
+        <p class="lede">Twofold begins with the public information a person has chosen to share: one official LinkedIn profile and one public Instagram profile. The agent makes a profile from that evidence, then makes uncertainty visible.</p>
+        <div class="fact-row" aria-label="Twofold principles">
+          <span class="fact"><i></i> LinkedIn + Instagram only</span>
+          <span class="fact"><i></i> Evidence-linked analysis</span>
+          <span class="fact"><i></i> Unknowns stay unknown</span>
+        </div>
+      </section>
+
+      <section class="profile" aria-label="Example source-backed profile">
+        <div class="corner-note">Profile evidence<br />comes first</div>
+        <div class="profile-header">
+          <div class="status-line"><span>Agent profile · example</span><span class="status">Source checked</span></div>
+          <div class="identity">
+            <div class="monogram">AA</div>
+            <div><p class="name">Ali Abdaal</p><p class="role">Creator, entrepreneur, and author</p></div>
+          </div>
+          <div class="sources">
+            <a class="source" href="https://www.linkedin.com/in/ali-abdaal/" target="_blank" rel="noreferrer"><b>in</b> Official LinkedIn</a>
+            <a class="source" href="https://www.instagram.com/aliabdaal/" target="_blank" rel="noreferrer"><b>ig</b> Public Instagram</a>
+          </div>
+        </div>
+
+        <div class="analysis">
+          <div class="analysis-top"><h2>Profile analysis</h2><span>2 sources · 6 evidence items</span></div>
+          <div class="trait">
+            <div class="trait-label">Needs & goals</div>
+            <div class="trait-content"><div class="unknown">Relationship needs are not stated in the available sources.</div><span class="evidence">Shown as an honest unknown</span></div>
+          </div>
+          <div class="trait">
+            <div class="trait-label">Projects</div>
+            <div class="trait-content"><div class="chips"><span class="chip">Education</span><span class="chip">Productivity</span><span class="chip">Entrepreneurship</span></div><span class="evidence">LinkedIn profile and Instagram bio</span></div>
+          </div>
+          <div class="trait">
+            <div class="trait-label">Interests</div>
+            <div class="trait-content"><div class="chips"><span class="chip">Learning systems</span><span class="chip">Content creation</span><span class="chip">Writing</span></div><span class="evidence">Public posts and profile statements</span></div>
+          </div>
+          <div class="trait">
+            <div class="trait-label">Agent tools</div>
+            <div class="trait-content"><div class="chips"><span class="chip">getProfile</span><span class="chip">getInterests</span><span class="chip">askCandidateQuestion</span></div></div>
+          </div>
+        </div>
+      </section>
+      <div class="stage">01 / 04</div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+{
+  "testedAt": "2026-10-14T17:53:03.402Z",
+  "baseUrl": "http://localhost:3000",
+  "routes": {
+    "/": {
+      "name": "home",
+      "desktopOverflow": false,
+      "mobileOverflow": false,
+      "desktopScreenshot": "desktop-home.png",
+      "mobileScreenshot": "mobile-home.png",
+      "status": "PASS"
+    },
+    "/profiles": {
+      "name": "profiles",
+      "desktopOverflow": false,
+      "mobileOverflow": false,
+      "desktopScreenshot": "desktop-profiles.png",
+      "mobileScreenshot": "mobile-profiles.png",
+      "status": "PASS"
+    },
+    "/profiles/harshdip-saha": {
+      "name": "profile-harshdip",
+      "desktopOverflow": false,
+      "mobileOverflow": false,
+      "desktopScreenshot": "desktop-profile-harshdip.png",
+      "mobileScreenshot": "mobile-profile-harshdip.png",
+      "status": "PASS"
+    },
+    "/profiles/ali-abdaal": {
+      "name": "profile-ali",
+      "desktopOverflow": false,
+      "mobileOverflow": false,
+      "desktopScreenshot": "desktop-profile-ali.png",
+      "mobileScreenshot": "mobile-profile-ali.png",
+      "status": "PASS"
+    },
+    "/mcp-inspector": {
+      "name": "mcp-inspector",
+      "desktopOverflow": false,
+      "mobileOverflow": false,
+      "desktopScreenshot": "desktop-mcp-inspector.png",
+      "mobileScreenshot": "mobile-mcp-inspector.png",
+      "status": "PASS"
+    },
+    "/simulate": {
+      "name": "simulate",
+      "desktopOverflow": false,
+      "mobileOverflow": false,
+      "desktopScreenshot": "desktop-simulate.png",
+      "mobileScreenshot": "mobile-simulate.png",
+      "status": "PASS"
+    },
+    "/dates": {
+      "name": "dates",
+      "desktopOverflow": false,
+      "mobileOverflow": false,
+      "desktopScreenshot": "desktop-dates.png",
+      "mobileScreenshot": "mobile-dates.png",
+      "status": "PASS"
+    },
+    "/dates/date-harshdip-saha-ali-abdaal": {
+      "name": "date-detail",
+      "desktopOverflow": false,
+      "mobileOverflow": false,
+      "desktopScreenshot": "desktop-date-detail.png",
+      "mobileScreenshot": "mobile-date-detail.png",
+      "status": "PASS"
+    },
+    "/rankings": {
+      "name": "rankings",
+      "desktopOverflow": false,
+      "mobileOverflow": false,
+      "desktopScreenshot": "desktop-rankings.png",
+      "mobileScreenshot": "mobile-rankings.png",
+      "status": "PASS"
+    },
+    "/import": {
+      "name": "import",
+      "desktopOverflow": false,
+      "mobileOverflow": false,
+      "desktopScreenshot": "desktop-import.png",
+      "mobileScreenshot": "mobile-import.png",
+      "status": "PASS"
+    }
+  },
+  "interactions": {
+    "mcp_execution": {
+      "action": "Invoke getProfile() via MCP workbench",
+      "success": true
+    },
+    "date_simulation": {
+      "action": "Simulate 8-turn date between Harshdip Saha and Ali Abdaal",
+      "turnsRendered": 15,
+      "success": true
+    },
+    "candidate_import": {
+      "action": "Import custom pair and instantiate personal MCP agent",
+      "success": true
+    }
+  },
+  "summary": {
+    "totalRoutes": 10,
+    "passed": 10,
+    "failed": 0,
+    "overflowErrors": 0
+  }
+}

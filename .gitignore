@@ -14,3 +14,4 @@ pnpm-debug.log*
 Thumbs.db
 research/**/*.png
 scripts/open-vercel-login.cjs
+tsconfig.tsbuildinfo
